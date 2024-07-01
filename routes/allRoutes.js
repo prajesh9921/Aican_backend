@@ -6,6 +6,10 @@ router.get('/getClasses', AllRoutesController.GetAllClass);
 
 router.get('/getTeachers', AllRoutesController.GetAllTeachers);
 
+router.get('/getGenderCount', AllRoutesController.GetGenderCount);
+
+router.get('/getExpense', AllRoutesController.GetExpense);
+
 router.post('/addClass', AllRoutesController.AddClass);
 
 router.post('/addTeacher', AllRoutesController.AddTeacher);
