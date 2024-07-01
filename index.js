@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 var cors = require("cors");
 const port = 3500;
-const auth = require("./routes/auth");
-const quiz = require("./routes/quiz");
+const allRoutes  = require("./routes/allRoutes");
 
 // Middleware
 const dotenv = require("dotenv");
@@ -31,8 +30,7 @@ app.get("/", async (req, res) => {
 
 app.use(express.json());
 
-app.use("/api/auth", auth);
-app.use("/api/quiz", quiz);
+app.use("/api", allRoutes);
 
 app.use("/*", (req, res) => {
   res.status(404).json({ message: "Route not found" });
