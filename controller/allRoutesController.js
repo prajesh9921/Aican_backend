@@ -46,7 +46,7 @@ const AddClass = async (req, res, next) => {
   const newClass = new Class({
     name: className,
     year: year,
-    teacher: teachers,
+    teacher: teachers.toString(),
     studentfees: studentFees,
     studentlist: [],
   });
